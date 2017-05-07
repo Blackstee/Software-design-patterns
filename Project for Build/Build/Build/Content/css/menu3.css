@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700);
+.sidenav2 {
+    height: 0; /* 100% Full-height */
+    width: 680px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+    left: 250px;
+    background-color: #111; 
+    opacity:.8;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-left: 50%; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav2 a {
+    
+    text-decoration: none;
+    font-size: 25px;
+    color: #adadad;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav2 a:hover, .offcanvas a:focus{
+    color: #ffffff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav2 .closebtn2 {
+    position: absolute;
+    text-align: center;
+    font-size: 36px;
+    
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav2 {padding-top: 15px;}
+    .sidenav2 a {font-size: 18px;}
+}
+
+#myBar {
+    position:absolute;
+    left: 70px;
+    margin-left: 40px;
+    width: 6%;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+#pict1 {
+    position:absolute;
+    left:40px;
+}
+
+#myBar2 {
+    position:absolute;
+    left: 70px;
+    width: 18%;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+#myBar3 {
+    position:absolute;
+    left: 70px;
+    width: 20%;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+#myBar4 {
+    position:absolute;
+    left: 70px;
+    width: 8%;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+button {
+  display: inline-block;
+  position:absolute;
+  right: 85px;
+  font: 500 1.2em/1.2 'Roboto', sans-serif;
+  color: black;
+  line-height: 27px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+section.flat button {
+  color: #000;
+  background-color: #49c6c6;
+  border: none;
+}
+
+section.flat button:hover{
+  background-color: #3b8e8e;
+}
+
+section.flat button:active{
+  background-color: #317070;
+}

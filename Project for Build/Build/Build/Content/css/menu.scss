@@ -1,0 +1,134 @@
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700);
+/* Color Declarations */
+$White:	#49c6c6;
+$Black:	rgb(0,0,0);
+
+$LightOrange:	rgb(255,165,62);
+
+/* Color Config */
+$NavBG: rgba($Black, .6);
+$MenuItem: $LightOrange;
+$MenuTextColor: $White;
+
+/* Menu Config */
+$AnimationTime: .2s;
+$NavMarkerHeight: 40px;
+$NavMarkerWidth: 50px;
+$NavWidth: 300px;
+
+
+html, body {
+  font: 500 1.2em/1.2 'Roboto', sans-serif;
+    font-size: 1.8em;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+//A quick background to show off transparency
+body{ background: url(http://i.imgur.com/oiX1bgx.jpg) }
+
+a
+{
+  text-decoration: none;
+  i {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent; } 
+}  
+ 
+nav 
+{
+  background-color: $NavBG;
+  height: 100%;
+  position: fixed;
+  right: $NavWidth * -1;
+  top: 0;
+  @include transition(right $AnimationTime linear);
+  width: $NavWidth;
+  z-index: 9001; /* IT'S OVER 9000! */
+  #menuToggle
+  {
+    background: $NavBG;
+    display: block;
+    position: relative;
+    height: $NavMarkerHeight;
+    left: $NavMarkerWidth * -1;
+    top: 75px;
+    width: $NavMarkerWidth;
+    span
+    {
+      background: $MenuTextColor;
+      display: block;
+      height: 10%;
+      left: 10%;
+      position: absolute;
+      top: 45%;
+      width: 80%;
+      &:before, &:after {
+        background: $MenuTextColor;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: -250%;
+        @include transform(rotate(0deg));
+        width: 100%; }
+      &:after {
+        top: 250%; }
+    }
+  }
+  a:nth-child(n+2)
+  {
+    color: $MenuTextColor;
+    display: block;
+    font-size: 2.5em;
+    margin: 30px 0 30px 30px;
+    &:after {
+      background: $MenuItem;
+      content: '';
+      display: block;
+      height: 2px;
+      @include transition(width $AnimationTime);
+      width: 0; }
+    &:hover:after {
+      width: 100%; }
+  }
+}
+.open 
+{
+  right: 0;
+  #menuToggle
+  {
+    span
+    {
+      background: transparent;
+      left: 10%;
+      top: 45%;
+      &:before, &:after {
+        background: $MenuTextColor;
+        top: 0;
+        @include transform(rotate(45deg)); }
+      &:after {
+        @include transform(rotate(-45deg)); }
+    }
+  }
+}
+
+#menuToggle
+{
+  .navClosed
+  {
+    @include transition(background $AnimationTime/2 linear);
+    &:before, &:after {
+      @include transition(top $AnimationTime linear $AnimationTime/2, transform $AnimationTime linear $AnimationTime/2); }
+  }
+  .navOpen
+  {
+    @include transition(background $AnimationTime/2 linear $AnimationTime);
+    &:before, &:after {
+      @include transition(top $AnimationTime linear, transform $AnimationTime linear); }
+  }
+}
+
+

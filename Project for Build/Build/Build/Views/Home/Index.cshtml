@@ -1,0 +1,373 @@
+﻿
+
+<style>
+      canvas {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -9999;
+      }
+    </style>
+
+    <nav>
+  <a href="" id="menuToggle" title="show menu">
+    <span class="navClosed"><i>show menu</i></span>
+  </a>
+  <a href="#" onclick = openformenu()><img src="/Content/images/bigbuilding.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspManagers</font></h15></a>
+	<div id="formenucl" class="formenu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeformenu()">&times;</a>
+
+</div>
+  <a href="#"><img src="/Content/images/pto.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspPTO</font></h11></a>
+  <a href="#"><img src="/Content/images/numbers.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspSDO</font></h11></a>
+  <a href="#"><img src="/Content/images/materials.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspMaterials</font></h11></a>
+  <a href="#"><img src="/Content/images/transport.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspTransport</font></h11></a>
+  <a href="#"><img src="/Content/images/workers.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspWorkers</font></h11></a>
+	<a href="#"><img src="/Content/images/notes.svg" width="50" height="50" alt="Пример"><h11><font color = #49c6c6>&nbspSalary</font></h11></a>
+</nav>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="container">
+  <h1>To-Do List</h1>
+  <div class="items">
+
+    <input id="item2" type="checkbox">
+    <label for="item2">Task1</label>
+
+    <input id="item3" type="checkbox">
+    <label for="item3">Task2</label>
+
+    <input id="item4" type="checkbox">
+    <label for="item4">Task3</label>
+
+    <input id="item5" type="checkbox">
+    <label for="item5">Task4</label>
+
+    <input id="item6" type="checkbox">
+    <label for="item6">Task5</label>
+
+    <h2 class="done" aria-hidden="true">Done</h2>
+    <h2 class="undone" aria-hidden="true">Not Done</h2>
+  </div>
+</div>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()"><font color = #49c6c6><h2>TASKS</h2></font></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+</div>
+
+
+<div id="mySidenav2" class="sidenav2">
+  <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a><br><br>
+
+  <img id= "pict1" src="/Content/images/time.svg" width="30" height="30" alt="Пример">
+  <div id="myBar">15%</div>
+
+	<section class="flat">
+    <button onclick="move()" >Add</button>
+    </section>
+	<br><br><br>
+
+
+  <img id= "pict1" src="/Content/images/money.png" width="30" height="30" alt="Пример">
+  <div id="myBar2" >45%</div>
+
+	<section class="flat">
+    <button onclick="move2()" >Add</button>
+    </section>
+	<br><br><br>
+
+	<img id= "pict1" src="/Content/images/health.svg" width="30" height="30" alt="Пример">
+  <div id="myBar3">50%</div>
+
+	<section class="flat">
+    <button onclick="move3()" >Add</button>
+    </section>
+    <br><br><br>
+	
+	<img id= "pict1" src="/Content/images/mood.png" width="30" height="30" alt="Пример">
+  <div id="myBar4">20%</div>
+
+	<section class="flat">
+    <button onclick="move4()" >Add</button>
+    </section>
+    <br><br><br>
+	
+</div>
+
+
+<span onclick="openNav2()"><font color = #FFA53E><h2>PROGRESS</h2></font></span>
+
+
+
+
+
+  <div class="loader">
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__bar"></div>
+  <div class="loader__ball"></div>
+  </div>
+
+  
+ 
+<script type="text/javascript">
+
+
+
+
+
+	// ================vars===========
+
+	
+	var scene, camera, renderer, mesh;
+	
+    var meshFloor, ambientLight, light;
+
+    var crate, crateTexture, crateNormalMap, crateBumpMap;
+
+    var keyboard = {};
+	
+    var player = { height:5, speed:0.2, turnSpeed:Math.PI*0.02 };
+	
+    var USE_WIREFRAME = false;
+
+	var objects = []; 
+
+	var mouse = new THREE.Vector2(), INTERSECTED;
+
+	projector = new THREE.Projector();
+    mouseVector = new THREE.Vector3();
+
+	//===============init()===========
+    function init(){
+	    scene = new THREE.Scene();
+	    scene.background = new THREE.Color( 0x000000 );
+	    camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+
+
+	var textureLoader = new THREE.TextureLoader();
+	
+	crateTexture = textureLoader.load("/Content/images/grass-texture.jpg");
+
+
+	//==============Light=====================
+	ambientLight = new THREE.AmbientLight(0xffffff, 2);
+	scene.add(ambientLight);
+
+	var dirLight = new THREE.DirectionalLight( 0x999999, 0.125 );
+				dirLight.position.set( 1, 0, 0 ).normalize();
+				scene.add( dirLight );
+
+	var pointLight = new THREE.PointLight( 0x999999, 0.5 );
+				pointLight.position.set( 10, 100, 90 );
+				scene.add( pointLight );
+
+
+
+	var loader = new THREE.FontLoader();
+	loader.load( '/Content/fonts/font2.typeface.json', function ( font ) {
+    var textGeo = new THREE.TextGeometry( "B  U  I  L  D   I T  !", {
+
+        font: font,
+
+        size: 1,
+        height: 0.2,
+        curveSegments: 2,
+
+        bevelThickness: 0.1,
+        bevelSize: 0.1,
+        bevelEnabled: true
+
+    } );
+    var textMaterial = new THREE.MeshPhongMaterial( { color: 0xb9611c } );
+
+    var mesh2 = new THREE.Mesh( textGeo, textMaterial );
+    mesh2.position.set( -8, -1, -3 );
+    mesh2.rotation.y -=  4*Math.PI / 9;
+    //scene.add( mesh2 );
+	objects[1]= mesh2;
+	
+} );
+	
+	
+	// Model/material loading!
+	var mtlLoader = new THREE.MTLLoader();
+
+	mtlLoader.load("/Content/models/36f3395e75ea4915868fbe1b0c47b00c.blend.mtl", function(materials){
+		
+	   materials.preload();
+	
+	   var objLoader = new THREE.OBJLoader();
+	   objLoader.setMaterials(materials);
+	   objLoader.load("/Content/models/36f3395e75ea4915868fbe1b0c47b00c.blend.obj", function(mesh){
+		
+	       mesh.traverse(function(node){
+		   if( node instanceof THREE.Mesh ){
+					node.castShadow = true;
+					node.receiveShadow = true;
+				}
+			});
+		
+			scene.add(mesh);
+	        objects.push(mesh);
+			mesh.position.set(0, 0, 0);
+			mesh.rotation.y = -Math.PI/4;
+		});
+		
+	});
+
+
+
+
+	camera.position.set(-15, player.height, 2);
+	camera.lookAt(new THREE.Vector3(0,player.height,0));
+	
+	renderer = new THREE.WebGLRenderer();
+	renderer.setSize(1280, 720);
+
+	renderer.shadowMap.enabled = true;
+	renderer.shadowMap.type = THREE.BasicShadowMap;
+
+	
+	document.addEventListener( 'mousedown', onDocumentMouseDown);
+
+        function onDocumentMouseDown( event ) {    
+            event.preventDefault();
+            var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   
+                                    -( event.clientY / window.innerHeight ) * 2 + 1,  
+                                    0.5 );     
+            var raycaster =  new THREE.Raycaster();                                        
+            raycaster.setFromCamera( mouse3D, camera );
+	
+	        var intersects = raycaster.intersectObjects(scene.children );
+	
+            if ( intersects.length > 0 ) {
+                intersects[ 0 ].object.material.color.setHex( 0x242323 );
+	            if (intersects[ 0 ].object == objects[1]){
+	            meshFloor1 = new THREE.Mesh(
+		        new THREE.SphereGeometry(2, 12,12),
+		        new THREE.MeshPhongMaterial({color:0x444444, wireframe:USE_WIREFRAME})
+	            );
+             	meshFloor1.position.z = -6;
+             	meshFloor1.position.y = 4;
+	            meshFloor1.position.x = -3;
+	           scene.add(meshFloor1);}
+	       
+            }
+        }
+
+	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+	    function onDocumentMouseMove( event ) {
+	
+				event.preventDefault();
+
+				mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+	            var raycaster2 =  new THREE.Raycaster(); 
+	            raycaster2.setFromCamera( mouse, camera );
+
+				var intersects2 = raycaster2.intersectObjects( scene.children );
+
+				if ( intersects2.length > 0 ) {
+
+					if ( INTERSECTED != intersects2[ 0 ].object ) {
+
+						if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+
+						INTERSECTED = intersects2[ 0 ].object;
+						INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
+						INTERSECTED.material.color.setHex( 0x242323 );
+
+					}
+
+				} else {
+
+					if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+
+					INTERSECTED = null;
+
+				}
+
+
+			}
+	var text2 = document.createElement('div');
+text2.style.position = 'absolute';
+//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
+text2.style.width = 100;
+text2.style.height = 100;
+text2.style.backgroundColor = "blue";
+text2.innerHTML = "hi there!";
+text2.style.top = 200 + 'px';
+text2.style.left = 200 + 'px';
+//document.body.appendChild(text2);
+
+
+	document.body.appendChild(renderer.domElement);
+	animate();
+}
+
+function animate(){
+	requestAnimationFrame(animate);
+
+	
+	if(keyboard[83]){ // W key
+		camera.position.x += Math.sin(camera.rotation.y) * player.speed;
+		camera.position.z -= -Math.cos(camera.rotation.y) * player.speed;
+	}
+	if(keyboard[87]){ // S key
+		camera.position.x -= Math.sin(camera.rotation.y) * player.speed;
+		camera.position.z += -Math.cos(camera.rotation.y) * player.speed;
+	}
+	if(keyboard[65]){ // A key
+		camera.position.x -= Math.sin(camera.rotation.y + Math.PI/2) * player.speed;
+		camera.position.z += -Math.cos(camera.rotation.y + Math.PI/2) * player.speed;
+	}
+	if(keyboard[68]){ // D key
+		camera.position.x -= Math.sin(camera.rotation.y - Math.PI/2) * player.speed;
+		camera.position.z += -Math.cos(camera.rotation.y - Math.PI/2) * player.speed;
+	}
+	
+	if(keyboard[37]){ // left arrow key
+		camera.rotation.y += player.turnSpeed;
+	}
+	if(keyboard[39]){ // right arrow key
+		camera.rotation.y -= player.turnSpeed;
+	}
+	
+	
+	renderer.render(scene, camera);
+}
+
+function keyDown(event){
+	keyboard[event.keyCode] = true;
+}
+
+function keyUp(event){
+	keyboard[event.keyCode] = false;
+}
+
+function showParameters(){
+	    camera.position.x += 5;
+	}
+
+
+
+
+   
+window.addEventListener('keydown', keyDown);
+window.addEventListener('keyup', keyUp);
+window.onload = init()
+</script>

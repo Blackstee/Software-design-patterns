@@ -1,0 +1,16 @@
+/Users/blackstee/Projects/Build/Build/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/blackstee/Projects/Build/Build/bin/Build.dll.mdb
+/Users/blackstee/Projects/Build/Build/bin/Build.dll
+/Users/blackstee/Projects/Build/Build/obj/Debug/Build.dll
+/Users/blackstee/Projects/Build/Build/obj/Debug/Build.dll.mdb
+/Users/blackstee/Projects/Build/Build/bin/System.Web.Razor.dll
+/Users/blackstee/Projects/Build/Build/bin/Microsoft.Web.Infrastructure.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.Helpers.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.WebPages.Deployment.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.WebPages.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.WebPages.Razor.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.Mvc.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Net.Http.Formatting.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.Http.dll
+/Users/blackstee/Projects/Build/Build/bin/System.Web.Http.WebHost.dll
+/Users/blackstee/Projects/Build/Build/bin/Newtonsoft.Json.dll

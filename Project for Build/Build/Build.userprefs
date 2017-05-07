@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{5B6AE8AB-FB64-486A-AAED-539747900FAA}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Build/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="Build/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Build/Views/Home/Index.cshtml" Line="25" Column="72" />
+      <File FileName="Build/Views/_ViewStart.cshtml" Line="2" Column="46" />
+      <File FileName="Build/Views/Shared/_Layout.cshtml" Line="17" Column="84" />
+      <File FileName="Build/Global.asax.cs" Line="1" Column="1" />
+      <File FileName="Build/Global.asax" Line="1" Column="1" />
+      <File FileName="Build/Models/Users.cs" Line="6" Column="10" />
+      <File FileName="Build/App_Start/RouteConfig.cs" Line="6" Column="15" />
+      <File FileName="Build/App_Start/WebApiConfig.cs" Line="1" Column="1" />
+      <File FileName="Build/packages.config" Line="1" Column="1" />
+      <File FileName="Build/Web.config" Line="1" Column="1" />
+      <File FileName="Build/Views/Web.config" Line="1" Column="1" />
+      <File FileName="Build/Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="Build/Views/Home/Main.cshtml" Line="139" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Build PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
