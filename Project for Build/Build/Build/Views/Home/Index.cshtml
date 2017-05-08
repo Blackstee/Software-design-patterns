@@ -14,6 +14,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
     <nav>
   <a href="#" id="menuToggle" title="show menu">
     <span class="navClosed"><i>show menu</i></span>
@@ -25,6 +34,9 @@
      <section class="flat">
 	    <button1 onclick="closeformenu8()" > OKAY! </button1>
      </section>
+		<section class="flat">
+			<button2 > LOAD GAME </button2>
+	 </section>
     </div>
 	
   <a href="#" onclick = openformenu2()><img src="/Content/images/pto.svg" width="50" height="50" alt="PTO"><h11><font color = #49c6c6>&nbspPTO</font></h11></a>
@@ -59,7 +71,7 @@
 	    <button1 onclick="closeformenu4()" > OKAY! </button1>
      </section>
      <section class="flat">
-			<button2 > GO TO SHOP </button2>
+			<button2 onclick="openformenushop()" > GO TO SHOP </button2>
 	 </section>
     </div>
 	
@@ -71,7 +83,7 @@
 	    <button1 onclick="closeformenu5()" > OKAY! </button1>
      </section>
 	 <section class="flat">
-			<button2 > SUPPLIES </button2>
+			<button2 onclick="openformenutransport()"> SUPPLIES </button2>
 	 </section>
     </div>
 
@@ -100,6 +112,14 @@
     </div>
 	
 </nav>
+
+
+
+
+
+
+
+
 
 
 
@@ -140,6 +160,13 @@
 
 
 
+
+
+
+
+
+
+
 <div id="mySidenav2" class="sidenav2">
   <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a><br><br>
 
@@ -147,7 +174,7 @@
   <div id="myBar">15%</div>
 
 	<section class="flat">
-    <button onclick="move()" >Add</button>
+    <button4 onclick="move()" >Add</button4>
     </section>
 	<br><br><br>
 
@@ -156,7 +183,7 @@
   <div id="myBar2" >45%</div>
 
 	<section class="flat">
-    <button onclick="move2()" >Add</button>
+    <button4 onclick="move2()" >Add</button4>
     </section>
 	<br><br><br>
 
@@ -164,7 +191,7 @@
   <div id="myBar3">50%</div>
 
 	<section class="flat">
-    <button onclick="move3()" >Add</button>
+    <button4 onclick="move3()" >Add</button4>
     </section>
     <br><br><br>
 	
@@ -172,7 +199,7 @@
   <div id="myBar4">20%</div>
 
 	<section class="flat">
-    <button onclick="move4()" >Add</button>
+    <button4 onclick="move4()" >Add</button4>
     </section>
     <br><br><br>
 	
@@ -183,27 +210,295 @@
 <span onclick="openNav2()"><font color = #FFA53E><h2>PROСESSES</h2></font></span>
 
 
+
+
+
+
+
+
+
+
+
+
+
  <div id="formenuclworkers" class="formenu">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeformenuworkers()">&times;</a>
       <div class="container">
       <h1>My workers</h1>
-       <div class="items1">
+       <div class="items">
 
-    <label for="item2">Elizabeth Taylor</label>
+    
+    <input id="iitem2" type="checkbox">			
+    <label for="iitem2">Elizabeth Taylor
+			<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+</label>
 
-    <label for="item3">Tom Harryson</label>
 
-    <label for="item4">James Bond</label>
 
-    <label for="item5">Emma Watson</label>
+    <input id="iitem3" type="checkbox">
+	<label for="iitem3">Tom Harryson&nbsp&nbsp&nbsp<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
 
-    <label for="item6">Avril Lavigne</label>
-    <section class="flat">
-	    <button2 onclick="closeformenuworkers()" > OKAY! </button2>
-     </section>
-	 
-  </div>
-</div>	
+
+    <input id="iitem4" type="checkbox">
+    <label for="iitem4">James Bond&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem5" type="checkbox">
+	<label for="iitem5">Emma Watson&nbsp&nbsp
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem6" type="checkbox">
+    <label for="iitem6">Avril Lavigne&nbsp&nbsp&nbsp&nbsp&nbsp
+    <speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem7" type="checkbox">
+	<label for="iitem7">Avril Lavigne&nbsp&nbsp&nbsp&nbsp&nbsp
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem8" type="checkbox">
+	<label for="iitem8">Elizabeth Taylor
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem9" type="checkbox">
+    <label for="iitem9">Tom Harryson&nbsp&nbsp&nbsp
+    <speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem10" type="checkbox">
+	<label for="iitem10">James Bond&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem11" type="checkbox">
+    <label for="iitem11">Emma Watson&nbsp&nbsp
+    <speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+ 
+
+    <input id="iitem12" type="checkbox">
+	<label for="iitem12">Avril Lavigne&nbsp&nbsp&nbsp&nbsp&nbsp
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+			<button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+
+    <input id="iitem13" type="checkbox">
+	<label for="iitem13">Avril Lavigne&nbsp&nbsp&nbsp&nbsp&nbsp
+	<speed > |  2x  |</speed> <salary> | 200$ |</salary>
+		    <button onclick="addsalary()">+100$</button>
+			<button onclick="reducesalary()">-100$</button>
+			</label>
+
+	<h2 class="done" aria-hidden="true">To Hire</h2>
+			
+    <h2 class="undone" aria-hidden="true">Not to hire</h2>
+	
+	 </div>
+</div>
+	
+	<section class="flat">
+			<button5 onclick="closeformenuworkers()"> HIRE AND SAVE! </button5>
+	 </section>	
+
+	<br><br><br>
  </div>
+
+
+
+
+
+
+
+
+
+  <div id="formenuclshop" class="formenu">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeformenushop()">&times;</a>
+      <div class="container">
+      <h1>SHOP</h1>
+       <div class="items">
+
+    
+    <input id="aitem2" type="checkbox">			
+    <label for="aitem2">Tubes&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<price > |  2000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+    </label>
+
+
+
+    <input id="aitem3" type="checkbox">
+	<label for="aitem3">Wood&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<price > |  1000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem4" type="checkbox">
+    <label for="aitem4">Concrete&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <price > |  2000  |</price> <count> | 1 |</count>
+		    <button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem5" type="checkbox">
+	<label for="aitem5">Tile&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	        <price > |  500  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem6" type="checkbox">
+    <label for="aitem6">Bricks&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <price > |  3000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem7" type="checkbox">
+	<label for="aitem7">Cobbles&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	        <price > |  2000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem8" type="checkbox">
+	<label for="aitem8">Windows&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	        <price > |  500  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem9" type="checkbox">
+    <label for="aitem9">Shingles&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <price > |  200  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem10" type="checkbox">
+	<label for="aitem10">Furniture&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	         <price > |  20000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+    <input id="aitem11" type="checkbox">
+    <label for="aitem11">Concrete Mixer&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <price > |  2000  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+ 
+
+    <input id="aitem12" type="checkbox">
+	<label for="aitem12">Tools&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	        <price > |  200  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+	<input id="aitem13" type="checkbox">
+	<label for="aitem13">Paint&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	        <price > |  200  |</price> <count> | 1 |</count>
+			<button onclick="addnumber()">+1</button>
+			<button onclick="reducenumber()">-1</button>
+			</label>
+
+
+	<h2 class="done" aria-hidden="true">To buy</h2>
+			
+    <h2 class="undone" aria-hidden="true">Not to buy</h2>
+	
+	 </div>
+</div>
+
+	
+	
+	<section class="flat">
+			<button5 onclick="closeformenushop()"> BUY AND SAVE! </button5>
+	 </section>	
+
+	
+
+	<br><br><br>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div id="formenucltransport" class="formenu">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeformenutransport()">&times;</a>
+      <div class="container">
+      <h1>Supplies</h1>
+       <div class="items">
+        <img id= "pict2" src="/Content/images/truck.png" width="30" height="30" alt="truck">
+  <div id="myBar5">15%</div>
+ 
+	<br><br><br>
+
+
+  <img id= "pict2" src="/Content/images/truck.png" width="30" height="30" alt="truck">
+  <div id="myBar6" >45%</div>
+	<br><br><br>
+
+	 </div>
+     </div>
+
+	<br><br><br>
+ </div>
+
+
 
 
   <div class="loader">
@@ -218,7 +513,13 @@
 
 
 
-  
+
+
+
+
+
+
+
  
 <script type="text/javascript">
 
@@ -249,6 +550,7 @@
     mouseVector = new THREE.Vector3();
 
 	//===============init()===========
+	
     function init(){
 	    scene = new THREE.Scene();
 	    scene.background = new THREE.Color( 0x000000 );
@@ -261,6 +563,7 @@
 
 
 	//==============Light=====================
+	
 	ambientLight = new THREE.AmbientLight(0xffffff, 2);
 	scene.add(ambientLight);
 

@@ -25,6 +25,8 @@ function closeall(){
     closeformenu7();
     closeformenu8();
     closeformenuworkers();
+    closeformenushop();
+    closeformenutransport();
 }
 
 function openformenu8() {
@@ -103,10 +105,24 @@ function openformenu7() {
 
 function openformenuworkers() {
      closeall();
-    document.getElementById("formenucl7").style.width = "0";
-    document.getElementById("formenucl6").style.width = "0";  document.getElementById("formenuclworkers").style.width = "680px";
+
+    document.getElementById("formenuclworkers").style.width = "680px";
     
 }
+
+function openformenushop() {
+     closeall();
+     document.getElementById("formenuclshop").style.width = "680px";
+    
+}
+
+
+function openformenutransport() {
+     closeall();
+     document.getElementById("formenucltransport").style.width = "680px";
+    
+}
+
 /* Set the width of the side navigation to 0 */
 function closeformenu8() {
     document.getElementById("formenucl8").style.width = "0";
@@ -139,6 +155,15 @@ function closeformenu7() {
 
 function closeformenuworkers() {
     document.getElementById("formenuclworkers").style.width = "0";
+}
+
+function closeformenushop() {
+    document.getElementById("formenuclshop").style.width = "0";
+}
+
+
+function closeformenutransport() {
+    document.getElementById("formenucltransport").style.width = "0";
 }
 
 var pageLoaded8 = 0; 
@@ -249,7 +274,39 @@ function loaded7(i,f) {
 
 
 
+function move5() {
+    var elem = document.getElementById("myBar5"); 
+    var width = 20*0.4;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width *0.6
+                + '%'; 
+            elem.innerHTML = width + '%';
+        }
+    }
+}
 
+
+
+function move6() {
+    var elem = document.getElementById("myBar6"); 
+    var width = 20*0.4;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width *0.6
+                + '%'; 
+            elem.innerHTML = width + '%';
+        }
+    }
+}
 
 
 

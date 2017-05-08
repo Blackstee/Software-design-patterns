@@ -97,7 +97,7 @@
     color: white; 
 }
 
-button {
+button4 {
   display: inline-block;
   position:absolute;
   right: 85px;
@@ -109,20 +109,20 @@ button {
   border-radius: 0;
 }
 
-button:focus {
+button4:focus {
   outline: none
 }
 
-section.flat button {
+section.flat button4 {
   color: #000;
   background-color: #49c6c6;
   border: none;
 }
 
-section.flat button:hover{
+section.flat button4:hover{
   background-color: #3b8e8e;
 }
 
-section.flat button:active{
+section.flat button4:active{
   background-color: #317070;
 }

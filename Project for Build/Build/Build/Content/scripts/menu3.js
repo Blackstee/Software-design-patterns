@@ -1,6 +1,7 @@
 /* Set the width of the side navigation to 250px */
 function openNav2() {
-     closeformenu3();  document.getElementById("mySidenav2").style.height = "250px";
+    closeformenu3();
+    document.getElementById("mySidenav2").style.height = "250px";
 }
 
 /* Set the width of the side navigation to 0 */

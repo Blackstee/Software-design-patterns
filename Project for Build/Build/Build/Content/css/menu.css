@@ -184,6 +184,7 @@ nav a:nth-child(n+2):hover:after {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    color: #ffffff;
 }
 
 #tw8 {
@@ -276,7 +277,7 @@ nav a:nth-child(n+2):hover:after {
 button1 {
   display: inline-block;
   position:absolute;
-  right: 255px;
+  right: 295px;
   top: 300px;
   font: 500 1.2em/1.2 'Roboto', sans-serif;
   color: black;
@@ -321,25 +322,85 @@ button3:focus {
   outline: none
 }
 
+button5 {
+  display: inline-block;
+  position:absolute;
+  right: 230px;
+  top: 945px;
+  font: 500 1.2em/1.2 'Roboto', sans-serif;
+  color: black;
+  line-height: 27px;
+  
+  border-radius: 4px;
+}
+
+button5:focus {
+  outline: none
+}
+
 section.flat button1, ection.flat button3{
   color: #000;
   background-color: #49c6c6;
   border: none;
 }
 
-section.flat button2{
+section.flat button2, section.flat button5{
   color: #000;
   background-color: #ffa53e;
   border: none;
 }
 
 
-section.flat button1:hover, section.flat button2:hover, section.flat button3:hover{
+section.flat button1:hover, section.flat button2:hover, section.flat button3, section.flat button5:hover{
   background-color: #3b8e8e;
 }
 
-section.flat button1:active, section.flat button2:active, section.flat button3:active{
+section.flat button1:active, section.flat button2:active, section.flat button3, section.flat button5:active{
   background-color: #317070;
 }
 
 
+speed{
+    color: #ffa53e;
+}
+
+salary{
+    color: #49c6c6;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+button{
+    background-color: #ffa53e;
+    
+}
+
+
+
+#myBar5 {
+    position:absolute;
+    left: 170px;
+    width: 8%;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+
+#myBar6 {
+    position:absolute;
+    left: 170px;
+    width: 8%;
+    margin-left: 40px;
+    height: 30px;
+    background-color: #FFA53E;
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
+
+
+#pict2 {
+    position:absolute;
+    left:130px;
+}
