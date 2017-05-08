@@ -1,6 +1,6 @@
 /* Set the width of the side navigation to 250px */
 function openNav2() {
-    document.getElementById("mySidenav2").style.height = "250px";
+     closeformenu3();  document.getElementById("mySidenav2").style.height = "250px";
 }
 
 /* Set the width of the side navigation to 0 */
@@ -62,7 +62,8 @@ function move4() {
             clearInterval(id);
         } else {
             width++; 
-            elem.style.width = width *0.6  + '%'; 
+            elem.style.width = width *0.6
+                + '%'; 
             elem.innerHTML = width + '%';
         }
     }
