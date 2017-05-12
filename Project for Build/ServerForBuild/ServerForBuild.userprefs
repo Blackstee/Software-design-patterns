@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{38FA1713-FCCA-4ED1-9B5E-927A0F00610B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ServerForBuild/Process_dif_decorator.cs">
+    <Files>
+      <File FileName="ServerForBuild/Program.cs" Line="92" Column="36" />
+      <File FileName="ServerForBuild/User_Prototype.cs" Line="23" Column="51" />
+      <File FileName="ServerForBuild/User_Builder.cs" Line="27" Column="48" />
+      <File FileName="ServerForBuild/Workers_Flyweight.cs" Line="36" Column="29" />
+      <File FileName="ServerForBuild/Change_Observer.cs" Line="82" Column="2" />
+      <File FileName="ServerForBuild/Process_State.cs" Line="245" Column="3" />
+      <File FileName="ServerForBuild/Add_money_and_count_template.cs" Line="10" Column="18" />
+      <File FileName="ServerForBuild/Process_dif_decorator.cs" Line="37" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ServerForBuild PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
